@@ -1,0 +1,84 @@
+<resources>
+    <!-- App Information -->
+    <string name="app_name">Team 3756 Scouting Application</string>
+    <string name="toolbar_name">Team 3756 Scouting Application</string>
+
+    <!-- Tab Names -->
+    <string name="tab_one">Home</string>
+    <string name="tab_two">Team Scouting</string>
+    <string name="tab_three">Match Reports</string>
+
+    <!-- Home Fragment strings -->
+    <string name="home_title">Welcome to the \n Ramferno Scouting Application</string>
+    <string name="basic_title_text">Basic Instructions</string>
+    <string name="basic_text">1. Click an item in a list to see or edit contents \n 2. Hold a
+        list item to delete its contents \n 3. Sync information with server using options menu on
+        top right of screen \n 4. Retrieve match data using options menu on top right of
+        screen</string>
+    <string name="github_info">For more information on syncing data, \n visit the GitHub link
+        below</string>
+    <string name="github_name">Github</string>
+
+    <!-- Scout Fragment strings -->
+    <string name="add_button">Add</string>
+    <string name="refresh_button">Refresh</string>
+
+    <!-- Match Fragment strings -->
+    <string name="match_number">Match Number:</string>
+    <string name="placeholder">Placeholder</string>
+
+    <!-- Address Dialog Fragment strings -->
+    <string name="sync_title">Sync Scout Data</string>
+    <string name="ip_address">IP Address</string>
+
+    <!-- Match Information Dialog Fragment strings -->
+    <string name="team_event_title">Retrieve Match Info</string>
+    <string name="enter_team_number">Team #</string>
+    <string name="enter_event_code">Event Code</string>
+
+    <!-- View Match Data Fragment strings -->
+    <string name="view_match_data_fragment_title">Match Information</string>
+    <string name="match_number_view_data">Match Number</string>
+    <string name="match_type_view_data">Match Type</string>
+    <string name="alliances_title">Alliances</string>
+    <string name="team_one_title">Team 1</string>
+    <string name="team_two_title">Team 2</string>
+    <string name="team_three_title">Team 3</string>
+    <string name="autonomous_title">Autonomous</string>
+    <string name="fuel_count_high_title">High Fuel Count</string>
+    <string name="fuel_count_low_title">Low Fuel Count</string>
+    <string name="fuel_points_title">Fuel Points</string>
+    <string name="rotor_one_engaged">Rotor 1 Engaged</string>
+    <string name="rotor_two_engaged">Rotor 2 Engaged</string>
+    <string name="rotor_three_engaged">Rotor 3 Engaged</string>
+    <string name="rotor_four_engaged">Rotor 4 Engaged</string>
+    <string name="rotor_points_title">Rotor Points</string>
+    <string name="mobility_points_title">Mobility Points</string>
+    <string name="total_points_title">Total Points</string>
+    <string name="teleop_title">Teleoperated</string>
+    <string name="takeoff_points_title">Takeoff Points</string>
+    <string name="miscellaneous_title">Miscellaneous</string>
+    <string name="foul_points_title">Foul Points</string>
+    <string name="adjust_points_title">Adjustments</string>
+    <string name="final_score_title">Final Score</string>
+    <string name="dash">-</string>
+    <string name="back_button">Back</string>
+
+    <!-- Scout Data Fragment strings -->
+    <string name="scout_edit_button">EDIT</string>
+    <string name="scout_save_button">SAVE</string>
+    <string name="scout_data_fragment_title">Team Information</string>
+    <string name="scout_team_name">Team Name</string>
+    <string name="scout_team_name_hint">Name</string>
+    <string name="scout_team_number">Team Number</string>
+    <string name="scout_team_number_hint">Number</string>
+    <string name="scout_fuel_low">Can Shoot Fuel Low:</string>
+    <string name="scout_fuel_high">Can Shoot Fuel High:</string>
+    <string name="scout_fuel_points">Average Fuel Points per Game:</string>
+    <string name="scout_rotor_engaged">Can Engage Rotors:</string>
+    <string name="scout_endgame">Can Hang:</string>
+    <string name="scout_play_style">Play Style:</string>
+    <string name="scout_fuel_points_hint">Fuel Points</string>
+    <string name="scout_play_style_hint">Play Style</string>
+    <string name="scout_team_number_title">Team:</string>
+</resources>

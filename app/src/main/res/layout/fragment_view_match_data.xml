@@ -1,0 +1,952 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/view_match_data_container"
+    android:background="#fff"
+    tools:context="org.ramferno.ramfernoscouting2017.fragments.ViewMatchDataFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/view_data_button_layout"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:text="@string/back_button"
+            android:elevation="10dp"
+            android:textColor="#fff"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:background="@color/colorPrimary"
+            android:layout_height="60sp"
+            android:id="@+id/view_data_back_button"
+            android:layout_width="fill_parent" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/view_data_button_layout">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/view_match_data_fragment_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="@string/view_match_data_fragment_title"
+                android:textAllCaps="true" />
+            <TextView
+                android:id="@+id/match_type_view_data_title"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_match_data_fragment_title"
+                android:layout_centerHorizontal="true"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="@string/match_type_view_data" />
+            <TextView
+                android:id="@+id/match_type_view_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/match_type_view_data_title"
+                android:layout_centerHorizontal="true"
+                android:textSize="15sp"
+                android:text="" />
+            <TextView
+                android:id="@+id/match_number_view_data_title"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/match_type_view_data"
+                android:layout_centerHorizontal="true"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="@string/match_number_view_data" />
+            <TextView
+                android:id="@+id/match_number_view_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/match_number_view_data_title"
+                android:layout_centerHorizontal="true"
+                android:textSize="15sp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/alliance_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/match_number_view_data"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="@string/alliances_title" />
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/alliance_title"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:id="@+id/blue_team_one"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:background="@drawable/outline_blue"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/team_one_title" />
+                <TextView
+                    android:id="@+id/red_team_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_1">
+                <TextView
+                    android:id="@+id/blue_team_two"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/team_two_title" />
+                <TextView
+                    android:id="@+id/red_team_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_2">
+                <TextView
+                    android:id="@+id/blue_team_three"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/team_three_title" />
+                <TextView
+                    android:id="@+id/red_team_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/autonomous_title"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_3"
+                android:layout_centerHorizontal="true"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="@string/autonomous_title" />
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/autonomous_title">
+                <TextView
+                    android:id="@+id/blue_auto_fuel_count_high"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/fuel_count_high_title" />
+                <TextView
+                    android:id="@+id/red_auto_fuel_count_high"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_4">
+                <TextView
+                    android:id="@+id/blue_auto_fuel_count_low"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/fuel_count_low_title" />
+                <TextView
+                    android:id="@+id/red_auto_fuel_count_low"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_5">
+                <TextView
+                    android:id="@+id/blue_auto_fuel_points"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/fuel_points_title" />
+                <TextView
+                    android:id="@+id/red_auto_fuel_points"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_6">
+                <TextView
+                    android:id="@+id/blue_auto_rotor_1_engaged"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/rotor_one_engaged" />
+                <TextView
+                    android:id="@+id/red_auto_rotor_1_engaged"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_7">
+                <TextView
+                    android:id="@+id/blue_auto_rotor_2_engaged"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/rotor_two_engaged" />
+                <TextView
+                    android:id="@+id/red_auto_rotor_2_engaged"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_8">
+                <TextView
+                    android:id="@+id/blue_auto_rotor_points"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/rotor_points_title" />
+                <TextView
+                    android:id="@+id/red_auto_rotor_points"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_9">
+                <TextView
+                    android:id="@+id/blue_auto_mobility_points"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/mobility_points_title" />
+                <TextView
+                    android:id="@+id/red_auto_mobility_points"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_10">
+                <TextView
+                    android:id="@+id/blue_auto_total_points"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/total_points_title" />
+                <TextView
+                    android:id="@+id/red_auto_total_points"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/teleop_title"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_11"
+                android:layout_centerHorizontal="true"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="@string/teleop_title" />
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/teleop_title">
+                <TextView
+                    android:id="@+id/blue_tele_fuel_count_high"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/fuel_count_high_title" />
+                <TextView
+                    android:id="@+id/red_tele_fuel_count_high"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_12">
+                <TextView
+                    android:id="@+id/blue_tele_fuel_count_low"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/fuel_count_low_title" />
+                <TextView
+                    android:id="@+id/red_tele_fuel_count_low"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_13">
+                <TextView
+                    android:id="@+id/blue_tele_fuel_points"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/fuel_points_title" />
+                <TextView
+                    android:id="@+id/red_tele_fuel_points"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_14">
+                <TextView
+                    android:id="@+id/blue_tele_rotor_1_engaged"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/rotor_one_engaged" />
+                <TextView
+                    android:id="@+id/red_tele_rotor_1_engaged"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_15">
+                <TextView
+                    android:id="@+id/blue_tele_rotor_2_engaged"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/rotor_two_engaged" />
+                <TextView
+                    android:id="@+id/red_tele_rotor_2_engaged"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_16">
+                <TextView
+                    android:id="@+id/blue_tele_rotor_3_engaged"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/rotor_three_engaged" />
+                <TextView
+                    android:id="@+id/red_tele_rotor_3_engaged"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_17">
+                <TextView
+                    android:id="@+id/blue_tele_rotor_4_engaged"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/rotor_four_engaged" />
+                <TextView
+                    android:id="@+id/red_tele_rotor_4_engaged"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_18">
+                <TextView
+                    android:id="@+id/blue_tele_rotor_points"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/rotor_points_title" />
+                <TextView
+                    android:id="@+id/red_tele_rotor_points"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_19">
+                <TextView
+                    android:id="@+id/blue_tele_takeoff_points"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/takeoff_points_title" />
+                <TextView
+                    android:id="@+id/red_tele_takeoff_points"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_20">
+                <TextView
+                    android:id="@+id/blue_tele_total_points"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/total_points_title" />
+                <TextView
+                    android:id="@+id/red_tele_total_points"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/miscellaneous_title"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_21"
+                android:layout_centerHorizontal="true"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="@string/miscellaneous_title" />
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/miscellaneous_title">
+                <TextView
+                    android:id="@+id/blue_foul_points"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/foul_points_title" />
+                <TextView
+                    android:id="@+id/red_foul_points"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_22">
+                <TextView
+                    android:id="@+id/blue_adjust_points"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_blue"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/adjust_points_title" />
+                <TextView
+                    android:id="@+id/red_adjust_points"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/outline_red"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/final_score_title"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_data_layout_23"
+                android:layout_centerHorizontal="true"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="@string/final_score_title" />
+
+            <LinearLayout
+                android:id="@+id/view_data_layout_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/final_score_title">
+                <TextView
+                    android:id="@+id/blue_final_score"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/blueAlliance"
+                    android:text="" />
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="100dp"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:text="@string/dash" />
+                <TextView
+                    android:id="@+id/red_final_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/redAlliance"
+                    android:text="" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

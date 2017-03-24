@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#dc7b03</color>
+    <color name="colorPrimaryOpaque">#dc7b04</color>
+    <color name="colorPrimaryDark">#a14c02</color>
+    <color name="colorAccent">#dc7b03</color>
+    <color name="colorOptions">#fff</color>
+    <color name="blueAlliance">#1562a9</color>
+    <color name="redAlliance">#cc251c</color>
+</resources>

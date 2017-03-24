@@ -1,0 +1,60 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ramferno.ramfernoscouting2017.fragments.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/home_title"
+            android:textSize="18sp"
+            android:textStyle="normal|bold"
+            android:textAlignment="center" />
+        <ImageView
+            android:layout_width="171dp"
+            android:layout_height="145dp"
+            android:layout_gravity="center"
+            android:id="@+id/imageView"
+            app:srcCompat="@mipmap/ic_home_image" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/basic_title_text"
+            android:textSize="18sp"
+            android:textStyle="normal|bold"
+            android:textAlignment="center" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/basic_text"
+            android:textSize="12sp"
+            android:textAlignment="center" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="@string/github_info"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textAlignment="center" />
+        <Button
+            android:text="@string/github_name"
+            android:clickable="true"
+            android:layout_width="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:layout_height="wrap_content"
+            android:id="@+id/github_button" />
+    </LinearLayout>
+</FrameLayout>

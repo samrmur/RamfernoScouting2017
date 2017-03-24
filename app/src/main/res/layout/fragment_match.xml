@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/match_fragment"
+    tools:context="org.ramferno.ramfernoscouting2017.fragments.MatchFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lin_layout_match"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+        <Button
+            android:text="@string/refresh_button"
+            android:textColor="#fff"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_height="60sp"
+            android:background="@color/colorPrimary"
+            android:id="@+id/match_refresh_button"
+            android:layout_width="match_parent"/>
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/list_match"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/lin_layout_match"/>
+</RelativeLayout>
